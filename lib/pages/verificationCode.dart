@@ -15,6 +15,7 @@ class _VerificationUIState extends State<VerificationUI> {
   @override
   Widget build(BuildContext context) {
     var _number = Get.arguments;
+    var otp;
     return Scaffold(
       appBar: appbarOnlyBack(context),
       backgroundColor: Colors.white,
@@ -60,8 +61,8 @@ class _VerificationUIState extends State<VerificationUI> {
                   child: Padding(
                     padding: const EdgeInsets.symmetric(horizontal: 18.0),
                     child: TweenAnimationBuilder(
-                      tween: Tween(begin: 3.0, end: 0),
-                      duration: Duration(seconds: 3),
+                      tween: Tween(begin: 30.0, end: 0),
+                      duration: Duration(seconds: 30),
                       builder: (context, value, child) => Text(
                         "00:${value.toInt()}",
                         style: textStyle(
@@ -71,74 +72,122 @@ class _VerificationUIState extends State<VerificationUI> {
                       ),
                       onEnd: () {
                         // ignore: deprecated_member_use
-                        FlatButton(
-                          onPressed: () {},
-                          child: flatButton(
-                              borderRadius: SizeConfig.blockSizeVertical * 5,
-                              text: 'Resend',
-                              color: Colors.white,
-                              fontWeight: FontWeight.bold,
-                              fontSize: SizeConfig.blockSizeHorizontal * 5,
-                              paddingHorizontal:
-                                  SizeConfig.blockSizeVertical * 5,
-                              paddingVertical:
-                                  SizeConfig.blockSizeVertical * 2.5),
-                        );
                       },
                     ),
                   ),
                 ),
               ],
             ),
-            Row(
-              mainAxisAlignment: MainAxisAlignment.spaceAround,
-              children: [
-                SizedBox(
-                  width: SizeConfig.blockSizeHorizontal * 20,
+
+            Center(
+              child: Padding(
+                padding: const EdgeInsets.all(20.0),
+                child: SizedBox(
+                  width: SizeConfig.screenWidth,
                   child: TextFormField(
                     keyboardType: TextInputType.number,
-                    obscureText: true,
-                    style: TextStyle(fontSize: 25),
+                    style: TextStyle(
+                      fontSize: 25,
+                    ),
                     textAlign: TextAlign.center,
                     decoration: otpInputDecoration,
-                    onChanged: (value) {},
+                    onChanged: (value) {
+                      otp = value;
+                    },
                   ),
                 ),
-                SizedBox(
-                  width: SizeConfig.blockSizeHorizontal * 20,
-                  child: TextFormField(
-                    keyboardType: TextInputType.number,
-                    obscureText: true,
-                    style: TextStyle(fontSize: 25),
-                    textAlign: TextAlign.center,
-                    decoration: otpInputDecoration,
-                    onChanged: (value) {},
-                  ),
-                ),
-                SizedBox(
-                  width: SizeConfig.blockSizeHorizontal * 20,
-                  child: TextFormField(
-                    keyboardType: TextInputType.number,
-                    obscureText: true,
-                    style: TextStyle(fontSize: 25),
-                    textAlign: TextAlign.center,
-                    decoration: otpInputDecoration,
-                    onChanged: (value) {},
-                  ),
-                ),
-                SizedBox(
-                  width: SizeConfig.blockSizeHorizontal * 20,
-                  child: TextFormField(
-                    keyboardType: TextInputType.number,
-                    obscureText: true,
-                    style: TextStyle(fontSize: 25),
-                    textAlign: TextAlign.center,
-                    decoration: otpInputDecoration,
-                    onChanged: (value) {},
-                  ),
-                ),
-              ],
+              ),
             ),
+
+            Align(
+              alignment: Alignment.centerRight,
+              // ignore: deprecated_member_use
+              child: FlatButton(
+                // TODO: Add Firebase Otp verification
+                onPressed: () {
+                  print(otp);
+                },
+                child: flatButton(
+                    borderRadius: SizeConfig.blockSizeVertical * 20,
+                    text: 'Resend',
+                    color: Colors.white,
+                    fontWeight: FontWeight.bold,
+                    fontSize: SizeConfig.blockSizeHorizontal * 4,
+                    paddingHorizontal: SizeConfig.blockSizeVertical * 3,
+                    paddingVertical: SizeConfig.blockSizeVertical * 1.5),
+              ),
+            ),
+
+            Padding(
+              padding: const EdgeInsets.all(20.0),
+              // ignore: deprecated_member_use
+              child: Center(
+                child: FlatButton(
+                  // TODO: Add Firebase Otp verification
+                  onPressed: () {
+                    print(otp);
+                  },
+                  child: flatButton(
+                      borderRadius: SizeConfig.blockSizeVertical * 20,
+                      text: 'SUBMIT',
+                      color: Colors.white,
+                      fontWeight: FontWeight.bold,
+                      fontSize: SizeConfig.blockSizeHorizontal * 5,
+                      paddingHorizontal: SizeConfig.blockSizeVertical * 10,
+                      paddingVertical: SizeConfig.blockSizeVertical * 2.2),
+                ),
+              ),
+            ),
+
+            // Row(
+            //   mainAxisAlignment: MainAxisAlignment.spaceAround,
+            //   children: [
+            //     SizedBox(
+            //       width: SizeConfig.blockSizeHorizontal * 20,
+            //       child: TextFormField(
+            //         keyboardType: TextInputType.number,
+            //         obscureText: true,
+            //         style: TextStyle(fontSize: 25),
+            //         textAlign: TextAlign.center,
+            //         decoration: otpInputDecoration,
+            //         onChanged: (value) {},
+            //       ),
+            //     ),
+            //     SizedBox(
+            //       width: SizeConfig.blockSizeHorizontal * 20,
+            //       child: TextFormField(
+            //         keyboardType: TextInputType.number,
+            //         obscureText: true,
+            //         style: TextStyle(fontSize: 25),
+            //         textAlign: TextAlign.center,
+            //         decoration: otpInputDecoration,
+            //         onChanged: (value) {},
+            //       ),
+            //     ),
+            //     SizedBox(
+            //       width: SizeConfig.blockSizeHorizontal * 20,
+            //       child: TextFormField(
+            //         keyboardType: TextInputType.number,
+            //         obscureText: true,
+            //         style: TextStyle(fontSize: 25),
+            //         textAlign: TextAlign.center,
+            //         decoration: otpInputDecoration,
+            //         onChanged: (value) {},
+            //       ),
+            //     ),
+            //     SizedBox(
+            //       width: SizeConfig.blockSizeHorizontal * 20,
+            //       child: TextFormField(
+            //         keyboardType: TextInputType.number,
+            //         obscureText: true,
+            //         style: TextStyle(fontSize: 25),
+            //         textAlign: TextAlign.center,
+            //         decoration: otpInputDecoration,
+            //         onChanged: (value) {},
+            //       ),
+            //     ),
+            //   ],
+            // ),
           ],
         ),
       ),

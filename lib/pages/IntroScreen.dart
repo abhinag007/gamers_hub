@@ -1,3 +1,4 @@
+import 'package:auto_size_text/auto_size_text.dart';
 import 'package:dots_indicator/dots_indicator.dart';
 import 'package:flutter/material.dart';
 import 'package:gamers_hub/pages/startScreen.dart';
@@ -34,11 +35,12 @@ class _IntroScreenState extends State<IntroScreen> {
                   Expanded(
                     child: Padding(
                       padding: const EdgeInsets.all(8.0),
-                      child: Text(
+                      child: AutoSizeText(
                         'Start Your Journey, Right Here !',
                         style: TextStyle(
                           fontFamily: 'Poppins',
-                          fontSize: SizeConfig.blockSizeVertical * 5,
+                          fontSize: 70,
+                          // fontSize: SizeConfig.blockSizeVertical * 5,
                           shadows: [
                             Shadow(
                               blurRadius: 1,
@@ -87,12 +89,13 @@ class _IntroScreenState extends State<IntroScreen> {
                   Expanded(
                     child: Padding(
                       padding: const EdgeInsets.all(8.0),
-                      child: Text(
+                      child: AutoSizeText(
                         'Play whatever game you love !',
                         style: TextStyle(
                           fontWeight: FontWeight.bold,
                           fontFamily: 'poppins',
-                          fontSize: SizeConfig.blockSizeVertical * 5,
+                          fontSize: 70,
+                          // fontSize: SizeConfig.blockSizeVertical * 5,
                           shadows: [
                             Shadow(
                               blurRadius: 1,
@@ -141,12 +144,13 @@ class _IntroScreenState extends State<IntroScreen> {
                   Expanded(
                     child: Padding(
                       padding: const EdgeInsets.all(8.0),
-                      child: Text(
+                      child: AutoSizeText(
                         'Fill your wallet by playing tournament',
                         style: TextStyle(
                           fontWeight: FontWeight.bold,
                           fontFamily: 'poppins',
-                          fontSize: SizeConfig.blockSizeVertical * 5,
+                          fontSize: 70,
+                          // fontSize: SizeConfig.blockSizeVertical * 5,
                           shadows: [
                             Shadow(
                               blurRadius: 1,

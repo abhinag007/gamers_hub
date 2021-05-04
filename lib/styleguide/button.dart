@@ -1,3 +1,4 @@
+import 'package:auto_size_text/auto_size_text.dart';
 import 'package:flutter/material.dart';
 import 'package:gamers_hub/styleguide/textstyle.dart';
 import 'color.dart';
@@ -19,8 +20,9 @@ Container flatButton({
     child: Padding(
       padding: EdgeInsets.symmetric(
           vertical: paddingVertical, horizontal: paddingHorizontal),
-      child: Text(
+      child: AutoSizeText(
         text,
+        maxFontSize: 25,
         style:
             textStyle(fontSize: fontSize, fontWeight: fontWeight, color: color),
       ),

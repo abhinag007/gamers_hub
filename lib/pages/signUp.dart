@@ -13,8 +13,8 @@ class SignUp extends StatefulWidget {
 }
 
 class _SignUpState extends State<SignUp> {
-  var _number = null;
-  var _phoneNumber = null;
+  var _number = '+91';
+  var _phoneNumber;
   var _countrycode = '+91';
   @override
   Widget build(BuildContext context) {
@@ -77,6 +77,7 @@ class _SignUpState extends State<SignUp> {
                         onChanged: (p) {
                           setState(() {
                             _countrycode = p.toString();
+                            _number = '';
                             _number = _countrycode + _phoneNumber;
                           });
                         },
@@ -126,6 +127,7 @@ class _SignUpState extends State<SignUp> {
                       onChanged: (String value) {
                         setState(() {
                           _phoneNumber = value;
+                          _number = '';
                           _number = _countrycode + value;
                         });
                       },
@@ -139,8 +141,9 @@ class _SignUpState extends State<SignUp> {
               // ignore: deprecated_member_use
               FlatButton(
                 onPressed: () {
+                  print(_number);
                   // Get.to(VerificationUI());
-                  if (GetUtils.isPhoneNumber(_number)) {
+                  if (GetUtils.isPhoneNumber(_number) && (_number != null)) {
                     Get.to(VerificationUI(), arguments: _number);
                   } else {
                     Get.snackbar('Invalid Number', 'Please Enter Valid Number');
