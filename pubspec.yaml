@@ -28,7 +28,6 @@ dependencies:
   flutter_statusbarcolor: ^0.2.3
   dots_indicator: ^1.2.0
   country_code_picker: ^1.7.0
-  auto_size_text: ^2.1.0
   flutter:
     sdk: flutter
 
