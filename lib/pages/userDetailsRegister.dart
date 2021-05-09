@@ -1,20 +1,20 @@
-import 'package:auto_size_text/auto_size_text.dart';
-import 'package:flutter/cupertino.dart';
+import 'package:flutter/material.dart';
+import 'package:gamers_hub/pages/userPersonality.dart';
 import 'package:gamers_hub/responsiveUI/sizeConfig.dart';
 import 'package:gamers_hub/styleguide/button.dart';
-import 'package:gamers_hub/styleguide/textstyle.dart';
 import 'package:get/get.dart';
-import 'package:flutter/material.dart';
 
 class UserDetailsRegister extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     SizeConfig().init(context);
     return Scaffold(
-      resizeToAvoidBottomInset: false,
+      // resizeToAvoidBottomInset: false,
       body: SafeArea(
+        bottom: false,
         child: Padding(
-          padding: const EdgeInsets.fromLTRB(30, 0, 30, 0),
+          padding:
+              const EdgeInsets.only(left: 30, top: 0, right: 30, bottom: 0),
           child: Container(
             child: SingleChildScrollView(
               child: Column(
@@ -26,6 +26,12 @@ class UserDetailsRegister extends StatelessWidget {
                     style: TextStyle(
                       fontFamily: 'poppins',
                       fontSize: SizeConfig.blockSizeVertical * 6,
+                      shadows: [
+                        Shadow(
+                          blurRadius: 1,
+                          offset: Offset(1, 1),
+                        ),
+                      ],
                     ),
                     maxLines: 2,
                   ),
@@ -63,7 +69,7 @@ class UserDetailsRegister extends StatelessWidget {
                         height: 20,
                       ),
                       TextFormField(
-                        keyboardType: TextInputType.name,
+                        keyboardType: TextInputType.visiblePassword,
                         decoration: InputDecoration(
                           hintText: 'Password',
                           labelText: '* Password',
@@ -76,7 +82,7 @@ class UserDetailsRegister extends StatelessWidget {
                         height: 20,
                       ),
                       TextFormField(
-                        keyboardType: TextInputType.name,
+                        keyboardType: TextInputType.visiblePassword,
                         decoration: InputDecoration(
                           hintText: 'Re-Enter Your Password',
                           labelText: '* Re-Enter Your Password',
@@ -89,7 +95,7 @@ class UserDetailsRegister extends StatelessWidget {
                         height: 20,
                       ),
                       TextFormField(
-                        keyboardType: TextInputType.name,
+                        keyboardType: TextInputType.emailAddress,
                         decoration: InputDecoration(
                           hintText: 'Email ID',
                           labelText: '* Email ID',
@@ -106,15 +112,18 @@ class UserDetailsRegister extends StatelessWidget {
                   Center(
                     // ignore: deprecated_member_use
                     child: FlatButton(
-                      onPressed: () {},
+                      onPressed: () {
+                        Get.to(UserPersonality());
+                      },
                       child: flatButton(
                           borderRadius: 250,
                           text: 'Next',
                           color: Colors.white,
                           fontWeight: FontWeight.bold,
-                          fontSize: 20,
-                          paddingHorizontal: 60,
-                          paddingVertical: 16),
+                          fontSize: SizeConfig.blockSizeHorizontal * 5,
+                          paddingHorizontal:
+                              SizeConfig.blockSizeHorizontal * 25,
+                          paddingVertical: SizeConfig.blockSizeVertical * 2),
                     ),
                   ),
                   SizedBox(

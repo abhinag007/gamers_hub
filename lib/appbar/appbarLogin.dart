@@ -10,7 +10,7 @@ AppBar appbarLogin(BuildContext context) {
     backgroundColor: Colors.white,
     leading: Image.asset(
       logo,
-      height: SizeConfig.screenWidth * 0.1,
+      // height: SizeConfig.screenWidth * 0.1,
     ),
     elevation: 0,
     title: Text(

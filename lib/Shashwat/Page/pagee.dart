@@ -2,17 +2,7 @@ import 'dart:ui';
 
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
-import 'package:gamers_hub/Shashwat/Page/SigninDialog.dart';
-import 'package:gamers_hub/Shashwat/Page/doneDialog.dart';
-import 'package:gamers_hub/Shashwat/Page/groupCreatedDialog.dart';
-import 'package:gamers_hub/Shashwat/Page/responsiveDialog.dart';
-import 'package:gamers_hub/Shashwat/Page/signupDialog.dart';
 import 'package:gamers_hub/Shashwat/Page/teamDialog.dart';
-import 'package:gamers_hub/dialogBox/textThenButton.dart';
-import 'package:gamers_hub/responsiveUI/sizeConfig.dart';
-import 'package:gamers_hub/styleguide/button.dart';
-import 'package:gamers_hub/styleguide/textstyle.dart';
-import 'package:gamers_hub/Shashwat/Page/SigninDialog.dart';
 
 class DialogBox extends StatelessWidget {
   @override
@@ -42,7 +32,8 @@ class Dialog extends StatelessWidget {
                 return showDialog(
                     context: context,
                     builder: (BuildContext context) {
-                      return doneDialog(context);
+                      // return createAlertDialogSignIn(context);
+                      return teamDialog(context);
                     });
               },
               child: Text(

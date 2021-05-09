@@ -2,8 +2,8 @@ import 'package:country_code_picker/country_code_picker.dart';
 import 'package:flutter/material.dart';
 import 'package:gamers_hub/appbar/onlyBack.dart';
 import 'package:gamers_hub/pages/verificationCode.dart';
-import 'package:gamers_hub/styleguide/button.dart';
 import 'package:gamers_hub/responsiveUI/sizeConfig.dart';
+import 'package:gamers_hub/styleguide/button.dart';
 import 'package:gamers_hub/styleguide/textstyle.dart';
 import 'package:get/get.dart';
 
@@ -142,7 +142,6 @@ class _SignUpState extends State<SignUp> {
               FlatButton(
                 onPressed: () {
                   print(_number);
-                  // Get.to(VerificationUI());
                   if (GetUtils.isPhoneNumber(_number) && (_number != null)) {
                     Get.to(VerificationUI(), arguments: _number);
                   } else {

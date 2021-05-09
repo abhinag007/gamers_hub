@@ -5,13 +5,13 @@ import 'package:gamers_hub/styleguide/textstyle.dart';
 
 AppBar appbarDashboard(context) {
   return AppBar(
-    toolbarHeight: SizeConfig.screenWidth * 0.15,
+    // toolbarHeight: SizeConfig.screenWidth * 0.15,
     leading: FittedBox(
       child: Padding(
         padding: const EdgeInsets.only(left: 10),
         child: Image.asset(
           logo,
-          width: SizeConfig.screenWidth,
+          // width: SizeConfig.screenWidth,
           fit: BoxFit.fitHeight,
         ),
       ),
@@ -21,25 +21,26 @@ AppBar appbarDashboard(context) {
       child: Text(
         'Gamer\'s Hub',
         style: textStyle(
-            fontSize: SizeConfig.screenWidth * 0.07,
+          // fontSize: SizeConfig.screenWidth * 0.07,
             fontWeight: FontWeight.bold,
             color: Colors.black),
       ),
     ),
     actions: [
       IconButton(
-        iconSize: SizeConfig.blockSizeHorizontal * 10,
+        // iconSize: SizeConfig.blockSizeHorizontal * 10,
           icon: Icon(
             Icons.notifications,
             color: Colors.black,
-            size: SizeConfig.blockSizeHorizontal * 10,
+            // size: SizeConfig.blockSizeHorizontal * 10,
           ),
           onPressed: null),
       Container(
         margin: EdgeInsets.symmetric(
-            horizontal: SizeConfig.blockSizeHorizontal * 2),
-        padding: EdgeInsets.symmetric(horizontal: 10),
-        width: SizeConfig.blockSizeHorizontal * 30,
+          horizontal: SizeConfig.blockSizeHorizontal * 2,
+          vertical: SizeConfig.blockSizeHorizontal,
+        ),
+        width: SizeConfig.blockSizeHorizontal * 25,
         alignment: Alignment.center,
         decoration: BoxDecoration(
           color: Colors.red[100],
@@ -50,8 +51,8 @@ AppBar appbarDashboard(context) {
           child: Text(
             '\$526',
             style: textStyle(
-                fontSize: SizeConfig.blockSizeHorizontal * 6,
-                fontWeight: FontWeight.bold,
+                // fontSize: SizeConfig.blockSizeHorizontal * 6,
+                // fontWeight: FontWeight.bold,
                 color: Colors.black),
           ),
         ),

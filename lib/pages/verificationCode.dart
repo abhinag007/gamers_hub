@@ -1,6 +1,7 @@
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:gamers_hub/appbar/onlyBack.dart';
+import 'package:gamers_hub/pages/userDetailsRegister.dart';
 import 'package:gamers_hub/responsiveUI/sizeConfig.dart';
 import 'package:gamers_hub/styleguide/button.dart';
 import 'package:gamers_hub/styleguide/textstyle.dart';
@@ -78,7 +79,6 @@ class _VerificationUIState extends State<VerificationUI> {
                 ),
               ],
             ),
-
             Center(
               child: Padding(
                 padding: const EdgeInsets.all(20.0),
@@ -98,7 +98,6 @@ class _VerificationUIState extends State<VerificationUI> {
                 ),
               ),
             ),
-
             Align(
               alignment: Alignment.centerRight,
               // ignore: deprecated_member_use
@@ -117,7 +116,6 @@ class _VerificationUIState extends State<VerificationUI> {
                     paddingVertical: SizeConfig.blockSizeVertical * 1.5),
               ),
             ),
-
             Padding(
               padding: const EdgeInsets.all(20.0),
               // ignore: deprecated_member_use
@@ -125,7 +123,7 @@ class _VerificationUIState extends State<VerificationUI> {
                 child: FlatButton(
                   // TODO: Add Firebase Otp verification
                   onPressed: () {
-                    print(otp);
+                    Get.offAll(UserDetailsRegister());
                   },
                   child: flatButton(
                       borderRadius: SizeConfig.blockSizeVertical * 20,
@@ -138,56 +136,6 @@ class _VerificationUIState extends State<VerificationUI> {
                 ),
               ),
             ),
-
-            // Row(
-            //   mainAxisAlignment: MainAxisAlignment.spaceAround,
-            //   children: [
-            //     SizedBox(
-            //       width: SizeConfig.blockSizeHorizontal * 20,
-            //       child: TextFormField(
-            //         keyboardType: TextInputType.number,
-            //         obscureText: true,
-            //         style: TextStyle(fontSize: 25),
-            //         textAlign: TextAlign.center,
-            //         decoration: otpInputDecoration,
-            //         onChanged: (value) {},
-            //       ),
-            //     ),
-            //     SizedBox(
-            //       width: SizeConfig.blockSizeHorizontal * 20,
-            //       child: TextFormField(
-            //         keyboardType: TextInputType.number,
-            //         obscureText: true,
-            //         style: TextStyle(fontSize: 25),
-            //         textAlign: TextAlign.center,
-            //         decoration: otpInputDecoration,
-            //         onChanged: (value) {},
-            //       ),
-            //     ),
-            //     SizedBox(
-            //       width: SizeConfig.blockSizeHorizontal * 20,
-            //       child: TextFormField(
-            //         keyboardType: TextInputType.number,
-            //         obscureText: true,
-            //         style: TextStyle(fontSize: 25),
-            //         textAlign: TextAlign.center,
-            //         decoration: otpInputDecoration,
-            //         onChanged: (value) {},
-            //       ),
-            //     ),
-            //     SizedBox(
-            //       width: SizeConfig.blockSizeHorizontal * 20,
-            //       child: TextFormField(
-            //         keyboardType: TextInputType.number,
-            //         obscureText: true,
-            //         style: TextStyle(fontSize: 25),
-            //         textAlign: TextAlign.center,
-            //         decoration: otpInputDecoration,
-            //         onChanged: (value) {},
-            //       ),
-            //     ),
-            //   ],
-            // ),
           ],
         ),
       ),
