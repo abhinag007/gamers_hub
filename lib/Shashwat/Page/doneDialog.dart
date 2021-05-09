@@ -31,16 +31,16 @@ Widget doneDialog(BuildContext context) {
                   children: <Widget>[
                     Image(
                       image: AssetImage(
-                        'assets/dialog_image/Ellipse.png',
+                        'assets/dialog_image/Frame.png',
                       ),
                       height: 132,
                       width: 132,
                     ),
-                    Image(
-                      image: AssetImage('assets/dialog_image/Vector.png'),
-                      height: 105,
-                      width: 138,
-                    )
+                    // Image(
+                    //   image: AssetImage('assets/dialog_image/Vector.png'),
+                    //   height: 105,
+                    //   width: 138,
+                    // )
                   ],
                 ),
                 SizedBox(

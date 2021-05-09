@@ -42,7 +42,7 @@ class Dialog extends StatelessWidget {
                 return showDialog(
                     context: context,
                     builder: (BuildContext context) {
-                      return createAlertDialogSignIn(context);
+                      return doneDialog(context);
                     });
               },
               child: Text(
