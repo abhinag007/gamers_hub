@@ -1,7 +1,9 @@
 import 'package:device_preview/device_preview.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
+import 'package:gamers_hub/Shashwat/Page/pagee.dart';
 import 'package:gamers_hub/common/appbartheme.dart';
+import 'package:gamers_hub/dialogBox/textThenButton.dart';
 import 'package:gamers_hub/widget/splashScreen.dart';
 import 'package:get/get.dart';
 
@@ -24,7 +26,7 @@ class MyApp extends StatelessWidget {
       locale: DevicePreview.locale(context),
       builder: DevicePreview.appBuilder,
       title: 'Gamer\'s Hub',
-      home: animatedSplashScreen(context),
+      home: DialogBox(),
       debugShowCheckedModeBanner: false,
     );
   }

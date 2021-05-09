@@ -10,7 +10,7 @@ Widget textThenButton(context) {
     ),
     elevation: 0,
     backgroundColor: Colors.transparent,
-    title: Stack(
+    title: Stack( 
       children: [
         Container(
           padding: EdgeInsets.only(left: 20, top: 45, right: 20, bottom: 45),
