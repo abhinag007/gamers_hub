@@ -28,7 +28,7 @@ AppBar appbarDashboard(context) {
     ),
     actions: [
       IconButton(
-        // iconSize: SizeConfig.blockSizeHorizontal * 10,
+          // iconSize: SizeConfig.blockSizeHorizontal * 10,
           icon: Icon(
             Icons.notifications,
             color: Colors.black,
