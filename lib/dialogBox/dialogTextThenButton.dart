@@ -1,11 +1,13 @@
 import 'dart:ui';
 
-import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
+import 'package:gamers_hub/pages/login.dart';
+import 'package:gamers_hub/pages/signUp.dart';
 import 'package:gamers_hub/responsiveUI/sizeConfig.dart';
-import 'package:gamers_hub/Shashwat/Page/pagee.dart';
+import 'package:get/get.dart';
 
-Widget createAlertDialogSignIn(BuildContext context) {
+Widget dialogTextThenButton(
+    BuildContext context, var displayText, var buttonText) {
   SizeConfig().init(context);
   return AlertDialog(
     backgroundColor: Colors.transparent,
@@ -30,8 +32,14 @@ Widget createAlertDialogSignIn(BuildContext context) {
               Align(
                 alignment: Alignment.center,
                 child: Text(
-                  "You are already Registered user!  ",
+                  "$displayText",
                   style: TextStyle(
+                      shadows: <Shadow>[
+                        Shadow(
+                            offset: Offset(0, 0),
+                            blurRadius: 1.0,
+                            color: Colors.black)
+                      ],
                       fontSize: 34,
                       fontWeight: FontWeight.w700,
                       fontFamily: 'Poppins'),
@@ -39,14 +47,14 @@ Widget createAlertDialogSignIn(BuildContext context) {
                 ),
               ),
               SizedBox(
-                height: 20,
+                height: 15,
                 width: 20,
               ),
               Align(
                 alignment: Alignment.center,
                 // ignore: deprecated_member_use
                 child: Container(
-                  margin: EdgeInsets.all(5),
+                  //margin: EdgeInsets.all(10),
                   // width: 100,
                   // height: 10,
                   width: 273,
@@ -59,24 +67,23 @@ Widget createAlertDialogSignIn(BuildContext context) {
                         end: FractionalOffset.bottomLeft,
                       ),
                       borderRadius: BorderRadius.circular(20)),
+                  // ignore: deprecated_member_use
                   child: FlatButton(
                       shape: RoundedRectangleBorder(
                           borderRadius: BorderRadius.circular(20)),
 
                       //  color: Colors.white,
                       onPressed: () {
-                        Navigator.of(context).pop();
+                        (buttonText.toString().toUpperCase() == "SIGNIN" ||
+                                buttonText.toString().toUpperCase() ==
+                                    "SIGN IN")
+                            ? Get.off(Login())
+                            : Get.off(SignUp());
                       },
                       child: Center(
                         child: Text(
-                          "Sign In",
+                          "$buttonText",
                           style: TextStyle(
-                            shadows: <Shadow>[
-                              Shadow(
-                                  offset: Offset(0, 0),
-                                  blurRadius: 1.0,
-                                  color: Colors.black)
-                            ],
                             color: Colors.white,
                             fontSize: 29,
                             fontFamily: 'Poppins',

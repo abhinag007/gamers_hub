@@ -1,8 +1,7 @@
 import 'package:flutter/material.dart';
-import 'package:gamers_hub/pages/userPersonality.dart';
+import 'package:gamers_hub/dialogBox/callDialog.dart';
 import 'package:gamers_hub/responsiveUI/sizeConfig.dart';
 import 'package:gamers_hub/styleguide/button.dart';
-import 'package:get/get.dart';
 
 class UserDetailsRegister extends StatelessWidget {
   @override
@@ -113,7 +112,8 @@ class UserDetailsRegister extends StatelessWidget {
                     // ignore: deprecated_member_use
                     child: FlatButton(
                       onPressed: () {
-                        Get.to(UserPersonality());
+                        // Get.to(UserPersonality());
+                        iconText(context, "Done");
                       },
                       child: flatButton(
                           borderRadius: 250,

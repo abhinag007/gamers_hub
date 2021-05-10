@@ -21,7 +21,7 @@ AppBar appbarDashboard(context) {
       child: Text(
         'Gamer\'s Hub',
         style: textStyle(
-          // fontSize: SizeConfig.screenWidth * 0.07,
+            // fontSize: SizeConfig.screenWidth * 0.07,
             fontWeight: FontWeight.bold,
             color: Colors.black),
       ),

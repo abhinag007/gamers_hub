@@ -1,10 +1,9 @@
 import 'dart:ui';
 
-import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:gamers_hub/responsiveUI/sizeConfig.dart';
 
-Widget teamDialog(BuildContext context) {
+Widget dialogIconThenText(BuildContext context, var text) {
   SizeConfig().init(context);
   return AlertDialog(
     backgroundColor: Colors.transparent,
@@ -55,7 +54,7 @@ Widget teamDialog(BuildContext context) {
                       Align(
                         alignment: Alignment.topCenter,
                         child: Text(
-                          'You Created your Team',
+                          '$text',
                           style: TextStyle(
                               shadows: <Shadow>[
                                 Shadow(

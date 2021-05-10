@@ -13,7 +13,7 @@ AppBar appbarName(context) {
     title: Text(
       'Gamer\'s Hub',
       style: textStyle(
-        // fontSize: SizeConfig.screenWidth * 0.06,
+          // fontSize: SizeConfig.screenWidth * 0.06,
           fontWeight: FontWeight.bold,
           color: Colors.black),
     ),

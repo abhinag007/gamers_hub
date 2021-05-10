@@ -1,20 +1,19 @@
 import 'dart:ui';
 
-import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
-import 'package:gamers_hub/Shashwat/Page/teamDialog.dart';
+import 'package:gamers_hub/dialogBox/callDialog.dart';
+
+// class DialogBox extends StatelessWidget {
+//   @override
+//   Widget build(BuildContext context) {
+//     return MaterialApp(
+//       title: 'Dialog',
+//       home: Dialog(),
+//     );
+//   }
+// }
 
 class DialogBox extends StatelessWidget {
-  @override
-  Widget build(BuildContext context) {
-    return MaterialApp(
-      title: 'Dialog',
-      home: Dialog(),
-    );
-  }
-}
-
-class Dialog extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -33,7 +32,10 @@ class Dialog extends StatelessWidget {
                     context: context,
                     builder: (BuildContext context) {
                       // return createAlertDialogSignIn(context);
-                      return teamDialog(context);
+                      return textButton(
+                          context,
+                          "You are already registered previously so dont be super smart",
+                          "Sign In");
                     });
               },
               child: Text(
