@@ -2,7 +2,7 @@ import 'package:device_preview/device_preview.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
 import 'package:gamers_hub/common/appbartheme.dart';
-import 'package:gamers_hub/pages/userDetailsRegister.dart';
+import 'package:gamers_hub/pages/tournament_games.dart';
 import 'package:get/get.dart';
 
 void main() {
@@ -25,7 +25,7 @@ class MyApp extends StatelessWidget {
       builder: DevicePreview.appBuilder,
       title: 'Gamer\'s Hub',
       // home: animatedSplashScreen(context),
-      home: UserDetailsRegister(),
+      home: Tournament_Games(),
       debugShowCheckedModeBanner: false,
     );
   }

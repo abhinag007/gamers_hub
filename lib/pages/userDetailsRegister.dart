@@ -1,7 +1,8 @@
 import 'package:flutter/material.dart';
-import 'package:gamers_hub/dialogBox/callDialog.dart';
+import 'package:gamers_hub/pages/userPersonality.dart';
 import 'package:gamers_hub/responsiveUI/sizeConfig.dart';
 import 'package:gamers_hub/styleguide/button.dart';
+import 'package:get/get.dart';
 
 class UserDetailsRegister extends StatelessWidget {
   @override
@@ -11,11 +12,10 @@ class UserDetailsRegister extends StatelessWidget {
       // resizeToAvoidBottomInset: false,
       body: SafeArea(
         bottom: false,
-        child: Padding(
-          padding:
-              const EdgeInsets.only(left: 30, top: 0, right: 30, bottom: 0),
-          child: Container(
-            child: SingleChildScrollView(
+        child: Container(
+          child: SingleChildScrollView(
+            child: Padding(
+              padding: const EdgeInsets.all(30),
               child: Column(
                 mainAxisAlignment: MainAxisAlignment.start,
                 crossAxisAlignment: CrossAxisAlignment.start,
@@ -81,6 +81,9 @@ class UserDetailsRegister extends StatelessWidget {
                         height: 20,
                       ),
                       TextFormField(
+                        onTap: () {
+                          FocusScope.of(context).requestFocus(new FocusNode());
+                        },
                         keyboardType: TextInputType.visiblePassword,
                         decoration: InputDecoration(
                           hintText: 'Re-Enter Your Password',
@@ -112,8 +115,7 @@ class UserDetailsRegister extends StatelessWidget {
                     // ignore: deprecated_member_use
                     child: FlatButton(
                       onPressed: () {
-                        // Get.to(UserPersonality());
-                        iconText(context, "Done");
+                        Get.to(UserPersonality());
                       },
                       child: flatButton(
                           borderRadius: 250,

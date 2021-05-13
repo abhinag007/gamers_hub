@@ -28,6 +28,7 @@ dependencies:
   flutter_statusbarcolor: ^0.2.3
   dots_indicator: ^1.2.0
   auto_size_text: ^2.1.0
+  sliding_up_panel: ^2.0.0+1
   country_code_picker: ^1.7.0
   flutter:
     sdk: flutter
@@ -61,6 +62,7 @@ flutter:
     - assets/intro_image/
     - assets/card_images/
     - assets/dialog_image/
+    - assets/drawer_icon/
   #   - images/a_dot_burr.jpeg
   #   - images/a_dot_ham.jpeg
 
