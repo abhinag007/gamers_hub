@@ -12,6 +12,7 @@ Widget textButton(BuildContext context, var text, var buttonText) {
       });
 }
 
+// ignore: missing_return
 Widget iconText(BuildContext context, var text) {
   showDialog(
       context: context,

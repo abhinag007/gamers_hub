@@ -12,7 +12,7 @@ AppBar appbarCommon(context) {
         Icons.arrow_back,
         color: Colors.black,
       ),
-      onPressed: () => Get.back,
+      onPressed: () => Get.back(),
     ),
     actions: [
       IconButton(

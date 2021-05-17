@@ -35,11 +35,6 @@ Widget dialogIconThenText(BuildContext context, var text) {
                       height: 132,
                       width: 132,
                     ),
-                    // Image(
-                    //   image: AssetImage('assets/dialog_image/Vector.png'),
-                    //   height: 105,
-                    //   width: 138,
-                    // )
                   ],
                 ),
                 SizedBox(

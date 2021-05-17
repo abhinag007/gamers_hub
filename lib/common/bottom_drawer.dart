@@ -1,6 +1,7 @@
 import 'package:auto_size_text/auto_size_text.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_svg/flutter_svg.dart';
+import 'package:gamers_hub/pages/scheduleGame.dart';
 import 'package:gamers_hub/pages/tournament_games.dart';
 import 'package:gamers_hub/responsiveUI/sizeConfig.dart';
 import 'package:gamers_hub/styleguide/button.dart';
@@ -62,8 +63,8 @@ class _BottomDrawerState extends State<BottomDrawer> {
                 child: MaterialButton(
                   minWidth: 40,
                   onPressed: () {
+                    Get.to(ScheduleGame());
                     setState(() {
-                      // currentScreen = Schedule();
                       currentTab = 1;
                     });
                   },
@@ -258,6 +259,7 @@ class _BottomDrawerState extends State<BottomDrawer> {
                         child: MaterialButton(
                           minWidth: 40,
                           onPressed: () {
+                            Get.to(ScheduleGame());
                             setState(() {
                               currentTab = 1;
                             });
@@ -286,6 +288,7 @@ class _BottomDrawerState extends State<BottomDrawer> {
                         child: MaterialButton(
                           minWidth: 40,
                           onPressed: () {
+                            Get.to(Tournament_Games());
                             setState(() {
                               currentTab = 4;
                             });

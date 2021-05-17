@@ -105,6 +105,7 @@ class _Tournament_GamesState extends State<Tournament_Games> {
               ),
             ),
           ),
+          bd,
         ],
       ),
     );

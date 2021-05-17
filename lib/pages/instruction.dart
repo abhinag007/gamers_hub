@@ -1,11 +1,6 @@
-import 'dart:ui';
-
 import 'package:flutter/material.dart';
 import 'package:gamers_hub/appbar/commonAppbar.dart';
-import 'package:gamers_hub/common/bottom_drawer.dart';
-import 'package:gamers_hub/common/buttonstyle.dart';
 import 'package:gamers_hub/pages/game_rules.dart';
-//import 'package:gamers_hub/pages/game_rules.dart';
 import 'package:gamers_hub/responsiveUI/sizeConfig.dart';
 
 class Instruction extends StatefulWidget {

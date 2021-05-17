@@ -43,8 +43,8 @@ Card displayCard(context, var iconPath, var titleText, var number) {
               ],
             ),
           ),
-          // ignore: deprecated_member_use
           Expanded(
+            // ignore: deprecated_member_use
             child: FlatButton(
               onPressed: () {},
               child: flatButton(

@@ -120,6 +120,7 @@ class _VerificationUIState extends State<VerificationUI> {
               padding: const EdgeInsets.all(20.0),
               // ignore: deprecated_member_use
               child: Center(
+                // ignore: deprecated_member_use
                 child: FlatButton(
                   // TODO: Add Firebase Otp verification
                   onPressed: () {
