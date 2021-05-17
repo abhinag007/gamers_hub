@@ -32,7 +32,6 @@ class _BottomDrawerState extends State<BottomDrawer> {
                 child: MaterialButton(
                   minWidth: 40,
                   onPressed: () {
-                    null;
                     setState(() {
                       // currentScreen = Statistics();
                       currentTab = 0;
@@ -63,7 +62,6 @@ class _BottomDrawerState extends State<BottomDrawer> {
                 child: MaterialButton(
                   minWidth: 40,
                   onPressed: () {
-                    null;
                     setState(() {
                       // currentScreen = Schedule();
                       currentTab = 1;
