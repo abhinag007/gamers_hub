@@ -1,6 +1,7 @@
 import 'package:auto_size_text/auto_size_text.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_svg/flutter_svg.dart';
+import 'package:gamers_hub/pages/rules.dart';
 import 'package:gamers_hub/pages/scheduleGame.dart';
 import 'package:gamers_hub/pages/tournament_games.dart';
 import 'package:gamers_hub/responsiveUI/sizeConfig.dart';
@@ -691,7 +692,9 @@ class _BottomDrawerState extends State<BottomDrawer> {
                         Expanded(
                           // ignore: deprecated_member_use
                           child: FlatButton(
-                            onPressed: () {},
+                            onPressed: () {
+                              Get.to(Rules(true));
+                            },
                             child: flatButton(
                                 borderRadius: 250,
                                 text: 'Important Rules',

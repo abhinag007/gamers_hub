@@ -4,24 +4,31 @@ import 'package:gamers_hub/common/bottom_drawer.dart';
 import 'package:gamers_hub/responsiveUI/sizeConfig.dart';
 
 // ignore: must_be_immutable
-class Instruct extends StatefulWidget {
+class Rules extends StatefulWidget {
   bool check;
 
-  Instruct(this.check);
+  Rules(this.check);
 
   @override
-  _InstructState createState() => _InstructState();
+  _RulesState createState() => _RulesState();
 }
 
-class _InstructState extends State<Instruct> {
+class _RulesState extends State<Rules> {
   String text1 =
       "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nisl sed nisl nunc, ultricies donecodio mi. Lectus lacus dui convallisvitae interdum augue commodo sollicitudin cras. Bibendum diam at amet nulla risus sed dolor molestie faucibus. Ultricies pulvinar malesuada adipiscing tortor eu pulvinar urna sagittis congue.";
 
   BottomDrawer bd = BottomDrawer();
+  bool check;
+
+  @override
+  void initState() {
+    // TODO: implement initState
+    super.initState();
+    check = widget.check;
+  }
 
   @override
   Widget build(BuildContext context) {
-    bool check = widget.check;
     SizeConfig().init(context);
     return Scaffold(
       appBar: appbarCommon(context),
@@ -32,6 +39,8 @@ class _InstructState extends State<Instruct> {
             flex: 8,
             child: Container(
               child: Column(
+                mainAxisAlignment: MainAxisAlignment.start,
+                crossAxisAlignment: CrossAxisAlignment.start,
                 children: [
                   SizedBox(
                     height: 15,
@@ -41,6 +50,7 @@ class _InstructState extends State<Instruct> {
                     crossAxisAlignment: CrossAxisAlignment.start,
                     children: [
                       Expanded(
+                        // ignore: deprecated_member_use
                         child: FlatButton(
                           onPressed: () {
                             setState(() {
@@ -52,8 +62,26 @@ class _InstructState extends State<Instruct> {
                                 horizontal: SizeConfig.blockSizeHorizontal * 8,
                                 vertical: SizeConfig.blockSizeVertical * 2),
                             decoration: BoxDecoration(
-                                color: check == true ? Colors.red : Colors.grey,
-                                borderRadius: BorderRadius.circular(30)),
+                              boxShadow: [
+                                BoxShadow(
+                                  color: Colors.grey.withOpacity(0.7),
+                                  spreadRadius: 1,
+                                  blurRadius: 10,
+                                  offset: Offset(
+                                      2, 2), // changes position of shadow
+                                ),
+                              ],
+                              gradient: check == true
+                                  ? LinearGradient(colors: [
+                                      const Color(0xffF64524),
+                                      const Color(0xffAC0D58),
+                                    ])
+                                  : LinearGradient(colors: [
+                                      const Color(0xffE7E3E3),
+                                      const Color(0xffE7E3E3)
+                                    ]),
+                              borderRadius: BorderRadius.circular(30),
+                            ),
                             child: Text(
                               'Instruction',
                               style: TextStyle(
@@ -61,7 +89,8 @@ class _InstructState extends State<Instruct> {
                                 fontFamily: 'Poppins',
                                 fontStyle: FontStyle.normal,
                                 fontWeight: FontWeight.w700,
-                                color: Colors.white,
+                                color:
+                                    check == true ? Colors.white : Colors.black,
                               ),
                             ),
                           ),
@@ -79,18 +108,36 @@ class _InstructState extends State<Instruct> {
                                 horizontal: SizeConfig.blockSizeHorizontal * 8,
                                 vertical: SizeConfig.blockSizeVertical * 2),
                             decoration: BoxDecoration(
-                                color: (check == false)
-                                    ? Colors.redAccent
-                                    : Colors.grey,
-                                borderRadius: BorderRadius.circular(30)),
+                              boxShadow: [
+                                BoxShadow(
+                                  color: Colors.grey.withOpacity(0.7),
+                                  spreadRadius: 1,
+                                  blurRadius: 10,
+                                  offset: Offset(
+                                      2, 2), // changes position of shadow
+                                ),
+                              ],
+                              gradient: check == false
+                                  ? LinearGradient(colors: [
+                                      const Color(0xffF64524),
+                                      const Color(0xffAC0D58),
+                                    ])
+                                  : LinearGradient(colors: [
+                                      const Color(0xffE7E3E3),
+                                      const Color(0xffE7E3E3)
+                                    ]),
+                              borderRadius: BorderRadius.circular(30),
+                            ),
                             child: Text(
-                              'Instruction',
+                              'Game Rule',
                               style: TextStyle(
                                 fontSize: 16,
                                 fontFamily: 'Poppins',
                                 fontStyle: FontStyle.normal,
                                 fontWeight: FontWeight.w700,
-                                color: Colors.white,
+                                color: check == false
+                                    ? Colors.white
+                                    : Colors.black,
                               ),
                             ),
                           ),
@@ -98,6 +145,11 @@ class _InstructState extends State<Instruct> {
                       ),
                     ],
                   ),
+                  SizedBox(height: 25),
+                  Container(
+                    margin: EdgeInsets.symmetric(horizontal: 15),
+                    child: check == true ? Text(text1) : Text("Game Rule Text"),
+                  )
                 ],
               ),
             ),
