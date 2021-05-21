@@ -3,6 +3,7 @@ import 'package:flutter/material.dart';
 import 'package:flutter_svg/flutter_svg.dart';
 import 'package:gamers_hub/pages/rules.dart';
 import 'package:gamers_hub/pages/scheduleGame.dart';
+import 'package:gamers_hub/pages/statistics.dart';
 import 'package:gamers_hub/pages/tournament_games.dart';
 import 'package:gamers_hub/responsiveUI/sizeConfig.dart';
 import 'package:gamers_hub/styleguide/button.dart';
@@ -35,7 +36,7 @@ class _BottomDrawerState extends State<BottomDrawer> {
                   minWidth: 40,
                   onPressed: () {
                     setState(() {
-                      // currentScreen = Statistics();
+                      Get.to(Statistics());
                       currentTab = 0;
                     });
                   },
@@ -231,7 +232,7 @@ class _BottomDrawerState extends State<BottomDrawer> {
                           minWidth: 40,
                           onPressed: () {
                             setState(() {
-                              // currentScreen = Statistics();
+                              Get.to(Statistics());
                               currentTab = 0;
                             });
                           },

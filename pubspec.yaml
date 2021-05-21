@@ -30,6 +30,7 @@ dependencies:
   dots_indicator: ^1.2.0
   slider_button: ^0.6.0
   date_time_picker: ^2.0.0
+  fl_chart: ^0.36.1
   auto_size_text: ^2.1.0
   sliding_up_panel: ^2.0.0+1
   country_code_picker: ^1.7.0

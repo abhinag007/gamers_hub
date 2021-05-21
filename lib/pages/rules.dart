@@ -82,15 +82,18 @@ class _RulesState extends State<Rules> {
                                     ]),
                               borderRadius: BorderRadius.circular(30),
                             ),
-                            child: Text(
-                              'Instruction',
-                              style: TextStyle(
-                                fontSize: 16,
-                                fontFamily: 'Poppins',
-                                fontStyle: FontStyle.normal,
-                                fontWeight: FontWeight.w700,
-                                color:
-                                    check == true ? Colors.white : Colors.black,
+                            child: FittedBox(
+                              child: Text(
+                                'Instruction',
+                                style: TextStyle(
+                                  fontSize: 16,
+                                  fontFamily: 'Poppins',
+                                  fontStyle: FontStyle.normal,
+                                  fontWeight: FontWeight.w700,
+                                  color: check == true
+                                      ? Colors.white
+                                      : Colors.black,
+                                ),
                               ),
                             ),
                           ),
@@ -128,16 +131,18 @@ class _RulesState extends State<Rules> {
                                     ]),
                               borderRadius: BorderRadius.circular(30),
                             ),
-                            child: Text(
-                              'Game Rule',
-                              style: TextStyle(
-                                fontSize: 16,
-                                fontFamily: 'Poppins',
-                                fontStyle: FontStyle.normal,
-                                fontWeight: FontWeight.w700,
-                                color: check == false
-                                    ? Colors.white
-                                    : Colors.black,
+                            child: FittedBox(
+                              child: Text(
+                                'Game Rule',
+                                style: TextStyle(
+                                  fontSize: 16,
+                                  fontFamily: 'Poppins',
+                                  fontStyle: FontStyle.normal,
+                                  fontWeight: FontWeight.w700,
+                                  color: check == false
+                                      ? Colors.white
+                                      : Colors.black,
+                                ),
                               ),
                             ),
                           ),
@@ -146,10 +151,27 @@ class _RulesState extends State<Rules> {
                     ],
                   ),
                   SizedBox(height: 25),
-                  Container(
-                    margin: EdgeInsets.symmetric(horizontal: 15),
-                    child: check == true ? Text(text1) : Text("Game Rule Text"),
-                  )
+                  Expanded(
+                    child: SingleChildScrollView(
+                      child: Container(
+                        margin: EdgeInsets.symmetric(
+                            horizontal: SizeConfig.blockSizeHorizontal * 4),
+                        child: check == true
+                            ? Text(
+                                text1,
+                                style: TextStyle(
+                                    fontSize:
+                                        SizeConfig.blockSizeHorizontal * 5),
+                              )
+                            : Text(
+                                "Game Rule Text",
+                                style: TextStyle(
+                                    fontSize:
+                                        SizeConfig.blockSizeHorizontal * 5),
+                              ),
+                      ),
+                    ),
+                  ),
                 ],
               ),
             ),
