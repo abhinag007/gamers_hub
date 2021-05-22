@@ -33,6 +33,7 @@ class _ProfileState extends State<Profile> {
                   Text(
                     'Profile',
                     style: TextStyle(
+                      fontFamily: 'poppins',
                       fontSize: SizeConfig.blockSizeVertical * 4,
                       shadows: [
                         Shadow(
