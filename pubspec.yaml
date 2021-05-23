@@ -63,6 +63,7 @@ flutter:
     - assets/card_images/
     - assets/dialog_image/
     - assets/drawer_icon/
+    - assets/profile_image/
   #   - images/a_dot_burr.jpeg
   #   - images/a_dot_ham.jpeg
 
