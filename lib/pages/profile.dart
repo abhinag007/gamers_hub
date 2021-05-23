@@ -47,7 +47,7 @@ class _ProfileState extends State<Profile> {
                   Expanded(
                       child: SingleChildScrollView(
                     child: Column(
-                      mainAxisAlignment: MainAxisAlignment.start,
+                      //mainAxisAlignment: MainAxisAlignment.start,
                       children: [
                         SizedBox(
                           height: 16,
@@ -153,7 +153,7 @@ class _ProfileState extends State<Profile> {
                             children: [
                               Center(
                                 child: Text(
-                                  'My name is shashwat pandey my manme is abhijeet nag my namge jisn sjdfb sdjhfb',
+                                  'My name is shashwat pandehfifvgyvghy my manme is abhijeet nag my namge jisn sjdfb sdjhfb',
                                   style: TextStyle(fontSize: 20),
                                 ),
                               ),
