@@ -2,10 +2,7 @@ import 'package:device_preview/device_preview.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
 import 'package:gamers_hub/common/appbartheme.dart';
-import 'package:gamers_hub/pages/notification.dart';
-import 'package:gamers_hub/pages/profile.dart';
-import 'package:gamers_hub/pages/setting.dart';
-
+import 'package:gamers_hub/widget/splashScreen.dart';
 import 'package:get/get.dart';
 
 void main() {
@@ -27,9 +24,7 @@ class MyApp extends StatelessWidget {
       locale: DevicePreview.locale(context),
       builder: DevicePreview.appBuilder,
       title: 'Gamer\'s Hub',
-      // home: animatedSplashScreen(context),
-      // home: Rules(false),
-      home: Notifications(),
+      home: animatedSplashScreen(context),
       debugShowCheckedModeBanner: false,
     );
   }

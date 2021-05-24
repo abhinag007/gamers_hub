@@ -3,9 +3,10 @@ import 'package:gamers_hub/appbar/commonAppbar.dart';
 import 'package:gamers_hub/common/bottom_drawer.dart';
 import 'package:gamers_hub/pages/profile.dart';
 import 'package:gamers_hub/responsiveUI/sizeConfig.dart';
-import 'package:gamers_hub/styleguide/button.dart';
 import 'package:gamers_hub/widget/usefulwidget.dart';
 import 'package:get/get.dart';
+
+import 'notification.dart';
 
 class Setting extends StatefulWidget {
   @override
@@ -14,6 +15,7 @@ class Setting extends StatefulWidget {
 
 class _SettingState extends State<Setting> {
   BottomDrawer bd = BottomDrawer();
+
   @override
   Widget build(BuildContext context) {
     SizeConfig().init(context);
@@ -48,161 +50,167 @@ class _SettingState extends State<Setting> {
                     ),
                   ),
                   Expanded(
-                      child: SingleChildScrollView(
-                    child: Container(
-                      padding: EdgeInsets.symmetric(
-                        horizontal: 10,
-                      ),
-                      child: Column(
-                        mainAxisAlignment: MainAxisAlignment.center,
-                        crossAxisAlignment: CrossAxisAlignment.center,
-                        children: [
-                          SizedBox(
-                            height: 7,
-                          ),
-                          GestureDetector(
-                            onTap: () {
-                              Get.to(Profile());
-                            },
-                            child: Container(
-                              child: Align(
-                                alignment: Alignment.centerLeft,
-                                child: Text(
-                                  'Profile Setting',
-                                  style: settingTextstyle(),
-                                  textAlign: TextAlign.start,
-                                ),
-                              ),
-                              padding: EdgeInsets.only(
-                                  left: 30, top: 17, right: 30, bottom: 17),
-                              margin: EdgeInsets.only(top: 15),
-                              decoration: settingBoxDecoration(),
+                    child: SingleChildScrollView(
+                      child: Container(
+                        padding: EdgeInsets.symmetric(
+                          horizontal: 10,
+                        ),
+                        child: Column(
+                          mainAxisAlignment: MainAxisAlignment.center,
+                          crossAxisAlignment: CrossAxisAlignment.center,
+                          children: [
+                            SizedBox(
+                              height: 7,
                             ),
-                          ),
-                          SizedBox(
-                            height: 10,
-                          ),
-                          GestureDetector(
-                            onTap: () {},
-                            child: Container(
-                              child: Align(
-                                alignment: Alignment.centerLeft,
-                                child: Text(
-                                  'Notification',
-                                  style: settingTextstyle(),
-                                  textAlign: TextAlign.start,
+                            GestureDetector(
+                              onTap: () {
+                                Get.to(Profile());
+                              },
+                              child: Container(
+                                child: Align(
+                                  alignment: Alignment.centerLeft,
+                                  child: Text(
+                                    'Profile Setting',
+                                    style: settingTextstyle(),
+                                    textAlign: TextAlign.start,
+                                  ),
                                 ),
+                                padding: EdgeInsets.only(
+                                    left: 30, top: 17, right: 30, bottom: 17),
+                                margin: EdgeInsets.only(top: 15),
+                                decoration: settingBoxDecoration(),
                               ),
-                              padding: EdgeInsets.only(
-                                  left: 30, top: 17, right: 30, bottom: 17),
-                              margin: EdgeInsets.only(top: 15),
-                              decoration: settingBoxDecoration(),
                             ),
-                          ),
-                          SizedBox(
-                            height: 10,
-                          ),
-                          GestureDetector(
-                            onTap: () {},
-                            child: Container(
-                              child: Align(
-                                alignment: Alignment.centerLeft,
-                                child: Text(
-                                  'Customer Support',
-                                  style: settingTextstyle(),
-                                  textAlign: TextAlign.start,
+                            SizedBox(
+                              height: 10,
+                            ),
+                            GestureDetector(
+                              onTap: () {
+                                Get.to(Notifications());
+                              },
+                              child: Container(
+                                child: Align(
+                                  alignment: Alignment.centerLeft,
+                                  child: Text(
+                                    'Notification',
+                                    style: settingTextstyle(),
+                                    textAlign: TextAlign.start,
+                                  ),
                                 ),
+                                padding: EdgeInsets.only(
+                                    left: 30, top: 17, right: 30, bottom: 17),
+                                margin: EdgeInsets.only(top: 15),
+                                decoration: settingBoxDecoration(),
                               ),
-                              padding: EdgeInsets.only(
-                                  left: 30, top: 17, right: 30, bottom: 17),
-                              margin: EdgeInsets.only(top: 15),
-                              decoration: settingBoxDecoration(),
                             ),
-                          ),
-                          SizedBox(
-                            height: 10,
-                          ),
-                          GestureDetector(
-                            onTap: () {},
-                            child: Container(
-                              child: Align(
-                                alignment: Alignment.centerLeft,
-                                child: Text(
-                                  'FAQ',
-                                  style: settingTextstyle(),
-                                  textAlign: TextAlign.start,
+                            SizedBox(
+                              height: 10,
+                            ),
+                            GestureDetector(
+                              onTap: () {},
+                              child: Container(
+                                child: Align(
+                                  alignment: Alignment.centerLeft,
+                                  child: Text(
+                                    'Customer Support',
+                                    style: settingTextstyle(),
+                                    textAlign: TextAlign.start,
+                                  ),
                                 ),
+                                padding: EdgeInsets.only(
+                                    left: 30, top: 17, right: 30, bottom: 17),
+                                margin: EdgeInsets.only(top: 15),
+                                decoration: settingBoxDecoration(),
                               ),
-                              padding: EdgeInsets.only(
-                                  left: 30, top: 17, right: 30, bottom: 17),
-                              margin: EdgeInsets.only(top: 15),
-                              decoration: settingBoxDecoration(),
                             ),
-                          ),
-                          SizedBox(
-                            height: 10,
-                          ),
-                          GestureDetector(
-                            onTap: () {},
-                            child: Container(
-                              child: Align(
-                                alignment: Alignment.centerLeft,
-                                child: Text(
-                                  'About Us',
-                                  style: settingTextstyle(),
-                                  textAlign: TextAlign.start,
+                            SizedBox(
+                              height: 10,
+                            ),
+                            GestureDetector(
+                              onTap: () {},
+                              child: Container(
+                                child: Align(
+                                  alignment: Alignment.centerLeft,
+                                  child: Text(
+                                    'FAQ',
+                                    style: settingTextstyle(),
+                                    textAlign: TextAlign.start,
+                                  ),
                                 ),
+                                padding: EdgeInsets.only(
+                                    left: 30, top: 17, right: 30, bottom: 17),
+                                margin: EdgeInsets.only(top: 15),
+                                decoration: settingBoxDecoration(),
                               ),
-                              padding: EdgeInsets.only(
-                                  left: 30, top: 17, right: 30, bottom: 17),
-                              margin: EdgeInsets.only(top: 15),
-                              decoration: settingBoxDecoration(),
                             ),
-                          ),
-                          SizedBox(
-                            height: 10,
-                          ),
-                          GestureDetector(
-                            onTap: () {},
-                            child: Container(
-                              child: Align(
-                                alignment: Alignment.centerLeft,
-                                child: Text(
-                                  'Privacy Policy',
-                                  style: settingTextstyle(),
-                                  textAlign: TextAlign.start,
+                            SizedBox(
+                              height: 10,
+                            ),
+                            GestureDetector(
+                              onTap: () {},
+                              child: Container(
+                                child: Align(
+                                  alignment: Alignment.centerLeft,
+                                  child: Text(
+                                    'About Us',
+                                    style: settingTextstyle(),
+                                    textAlign: TextAlign.start,
+                                  ),
                                 ),
+                                padding: EdgeInsets.only(
+                                    left: 30, top: 17, right: 30, bottom: 17),
+                                margin: EdgeInsets.only(top: 15),
+                                decoration: settingBoxDecoration(),
                               ),
-                              padding: EdgeInsets.only(
-                                  left: 30, top: 17, right: 30, bottom: 17),
-                              margin: EdgeInsets.only(top: 15),
-                              decoration: settingBoxDecoration(),
                             ),
-                          ),
-                          SizedBox(
-                            height: 10,
-                          ),
-                          GestureDetector(
-                            onTap: () {},
-                            child: Container(
-                              child: Align(
-                                alignment: Alignment.centerLeft,
-                                child: Text(
-                                  'Rate App',
-                                  style: settingTextstyle(),
-                                  textAlign: TextAlign.start,
+                            SizedBox(
+                              height: 10,
+                            ),
+                            GestureDetector(
+                              onTap: () {},
+                              child: Container(
+                                child: Align(
+                                  alignment: Alignment.centerLeft,
+                                  child: Text(
+                                    'Privacy Policy',
+                                    style: settingTextstyle(),
+                                    textAlign: TextAlign.start,
+                                  ),
                                 ),
+                                padding: EdgeInsets.only(
+                                    left: 30, top: 17, right: 30, bottom: 17),
+                                margin: EdgeInsets.only(top: 15),
+                                decoration: settingBoxDecoration(),
                               ),
-                              padding: EdgeInsets.only(
-                                  left: 30, top: 17, right: 30, bottom: 17),
-                              margin: EdgeInsets.only(top: 15),
-                              decoration: settingBoxDecoration(),
                             ),
-                          ),
-                        ],
+                            SizedBox(
+                              height: 10,
+                            ),
+                            GestureDetector(
+                              onTap: () {},
+                              child: Container(
+                                child: Align(
+                                  alignment: Alignment.centerLeft,
+                                  child: Text(
+                                    'Rate App',
+                                    style: settingTextstyle(),
+                                    textAlign: TextAlign.start,
+                                  ),
+                                ),
+                                padding: EdgeInsets.only(
+                                    left: 30, top: 17, right: 30, bottom: 17),
+                                margin: EdgeInsets.only(top: 15),
+                                decoration: settingBoxDecoration(),
+                              ),
+                            ),
+                            SizedBox(
+                              height: 25,
+                            ),
+                          ],
+                        ),
                       ),
                     ),
-                  ))
+                  ),
                 ],
               ),
             ),

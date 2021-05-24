@@ -18,7 +18,6 @@ class _Tournament_GamesState extends State<Tournament_Games> {
   @override
   Widget build(BuildContext context) {
     SizeConfig().init(context);
-    bool selected = false;
     return Scaffold(
       appBar: appbarDashboard(context),
       backgroundColor: Colors.white,

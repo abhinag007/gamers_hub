@@ -42,26 +42,24 @@ class _ProfileState extends State<Profile> {
                         ),
                       ],
                     ),
-                    maxLines: 2,
                   ),
                   Expanded(
-                      child: SingleChildScrollView(
-                    child: Column(
-                      //mainAxisAlignment: MainAxisAlignment.start,
-                      children: [
-                        SizedBox(
-                          height: 16,
-                        ),
-                        Center(
-                          child: FittedBox(
-                              child: Image.asset(
-                                  'assets/profile_image/profile.png')),
-                        ),
-                        SizedBox(
-                          height: 16,
-                        ),
-                        FittedBox(
-                          child: Text(
+                    child: SingleChildScrollView(
+                      child: Column(
+                        mainAxisAlignment: MainAxisAlignment.start,
+                        crossAxisAlignment: CrossAxisAlignment.center,
+                        children: [
+                          SizedBox(
+                            height: 16,
+                          ),
+                          Center(
+                            child:
+                                Image.asset('assets/profile_image/profile.png'),
+                          ),
+                          SizedBox(
+                            height: 16,
+                          ),
+                          Text(
                             'Harshad Mehta',
                             style: TextStyle(
                                 fontSize: 20,
@@ -69,9 +67,7 @@ class _ProfileState extends State<Profile> {
                                 fontWeight: FontWeight.w600,
                                 color: Color(0xfff000000)),
                           ),
-                        ),
-                        FittedBox(
-                          child: Text(
+                          Text(
                             'Level 5',
                             style: TextStyle(
                                 fontSize: 16,
@@ -79,91 +75,90 @@ class _ProfileState extends State<Profile> {
                                 fontFamily: 'Poppins',
                                 color: Color(0xfff000000)),
                           ),
-                        ),
-                        SizedBox(
-                          height: 20,
-                        ),
-                        Row(
-                          mainAxisAlignment: MainAxisAlignment.spaceEvenly,
-                          children: [
-                            Column(
-                              children: [
-                                Text(
-                                  'Earned',
-                                  style: TextStyle(
-                                      fontFamily: 'Poppins',
-                                      fontSize: 17,
-                                      color: Colors.black),
-                                ),
-                                Text(
-                                  "$text",
-                                  style: TextStyle(
-                                      fontFamily: 'Poppins',
-                                      fontSize: 17,
-                                      color: Colors.black),
-                                )
-                              ],
-                            ),
-                            Column(
-                              children: [
-                                Text(
-                                  'Points',
-                                  style: TextStyle(
-                                      fontFamily: 'Poppins',
-                                      fontSize: 17,
-                                      color: Colors.black),
-                                ),
-                                Text(
-                                  '$text1',
-                                  style: TextStyle(
-                                      fontFamily: 'Poppins',
-                                      fontSize: 17,
-                                      color: Colors.black),
-                                ),
-                              ],
-                            ),
-                          ],
-                        ),
-                        SizedBox(
-                          height: 22,
-                        ),
-                        Align(
-                          alignment: Alignment.centerLeft,
-                          child: Text(
-                            'Your Bio',
-                            style: TextStyle(
-                              fontSize: 20,
-                              fontFamily: 'Poppins',
-                              color: Colors.black,
-                            ),
-                            textAlign: TextAlign.center,
+                          SizedBox(
+                            height: 20,
                           ),
-                        ),
-                        SizedBox(
-                          height: 16,
-                        ),
-                        Container(
-                          padding: EdgeInsets.all(10),
-                          decoration: BoxDecoration(
-                            color: Colors.grey,
-                            borderRadius: BorderRadius.circular(20),
-                          ),
-                          //color: Colors.grey,
-                          child: Column(
+                          Row(
+                            mainAxisAlignment: MainAxisAlignment.spaceEvenly,
                             children: [
-                              Center(
-                                child: Text(
-                                  'My name is shashwat pandehfifvgyvghy my manme is abhijeet nag my namge jisn sjdfb sdjhfb',
-                                  style: TextStyle(fontSize: 20),
-                                ),
+                              Column(
+                                children: [
+                                  Text(
+                                    'Earned',
+                                    style: TextStyle(
+                                        fontFamily: 'Poppins',
+                                        fontSize: 17,
+                                        color: Colors.black),
+                                  ),
+                                  Text(
+                                    "$text",
+                                    style: TextStyle(
+                                        fontFamily: 'Poppins',
+                                        fontSize: 17,
+                                        color: Colors.black),
+                                  )
+                                ],
+                              ),
+                              Column(
+                                children: [
+                                  Text(
+                                    'Points',
+                                    style: TextStyle(
+                                        fontFamily: 'Poppins',
+                                        fontSize: 17,
+                                        color: Colors.black),
+                                  ),
+                                  Text(
+                                    '$text1',
+                                    style: TextStyle(
+                                        fontFamily: 'Poppins',
+                                        fontSize: 17,
+                                        color: Colors.black),
+                                  ),
+                                ],
                               ),
                             ],
                           ),
-                        ),
-                        SizedBox(
-                          height: 16,
-                        ),
-                        Align(
+                          SizedBox(
+                            height: 22,
+                          ),
+                          Align(
+                            alignment: Alignment.centerLeft,
+                            child: Text(
+                              'Your Bio',
+                              style: TextStyle(
+                                fontSize: 20,
+                                fontFamily: 'Poppins',
+                                color: Colors.black,
+                              ),
+                            ),
+                          ),
+                          SizedBox(
+                            height: 16,
+                          ),
+                          Container(
+                            padding: EdgeInsets.all(10),
+                            decoration: BoxDecoration(
+                              color: Colors.blueGrey,
+                              borderRadius: BorderRadius.circular(20),
+                            ),
+                            //color: Colors.grey,
+                            child: Column(
+                              children: [
+                                Center(
+                                  child: Text(
+                                    'My name is khghjghj kbjhghj hgjhghj hgjhghj jhgjhgjh  shashwat pandey my manme is abhijeet nag my namge jisn sjdfb sdjhfb',
+                                    style: TextStyle(
+                                        fontSize: 20, color: Colors.white),
+                                  ),
+                                ),
+                              ],
+                            ),
+                          ),
+                          SizedBox(
+                            height: 16,
+                          ),
+                          Align(
                             alignment: Alignment.centerLeft,
                             child: Text(
                               'Category',
@@ -171,10 +166,15 @@ class _ProfileState extends State<Profile> {
                                   fontFamily: 'Poppins',
                                   fontSize: 20,
                                   color: Colors.black),
-                            ))
-                      ],
+                            ),
+                          ),
+                          SizedBox(
+                            height: 40,
+                          ),
+                        ],
+                      ),
                     ),
-                  )),
+                  ),
                 ],
               ),
             ),

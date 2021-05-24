@@ -17,7 +17,6 @@ Widget iconText(BuildContext context, var text) {
   showDialog(
       context: context,
       builder: (BuildContext context) {
-        // return createAlertDialogSignIn(context);
         return dialogIconThenText(context, "$text");
       });
 }

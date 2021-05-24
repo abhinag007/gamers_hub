@@ -100,6 +100,7 @@ class _RulesState extends State<Rules> {
                         ),
                       ),
                       Expanded(
+                        // ignore: deprecated_member_use
                         child: FlatButton(
                           onPressed: () {
                             setState(() {

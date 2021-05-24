@@ -1,7 +1,9 @@
 import 'package:auto_size_text/auto_size_text.dart';
 import 'package:flutter/material.dart';
+import 'package:gamers_hub/pages/game_tournaments.dart';
 import 'package:gamers_hub/responsiveUI/sizeConfig.dart';
 import 'package:gamers_hub/styleguide/button.dart';
+import 'package:get/get.dart';
 
 Card displayCard(context, var iconPath, var titleText, var number) {
   return Card(
@@ -39,6 +41,7 @@ Card displayCard(context, var iconPath, var titleText, var number) {
                   "Number of Tournaments : $number",
                   style: TextStyle(fontFamily: 'poppins'),
                   maxLines: 2,
+                  minFontSize: 8,
                 ),
               ],
             ),
@@ -46,7 +49,10 @@ Card displayCard(context, var iconPath, var titleText, var number) {
           Expanded(
             // ignore: deprecated_member_use
             child: FlatButton(
-              onPressed: () {},
+              onPressed: () {
+                Get.to(Game_Tournaments(),
+                    arguments: {'path': iconPath, 'name': titleText});
+              },
               child: flatButton(
                   borderRadius: SizeConfig.screenWidth * 0.1,
                   text: 'PLAY',

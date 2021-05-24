@@ -1,10 +1,15 @@
 import 'package:auto_size_text/auto_size_text.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_svg/flutter_svg.dart';
+import 'package:gamers_hub/pages/coming_soon.dart';
+import 'package:gamers_hub/pages/leaderboard.dart';
+import 'package:gamers_hub/pages/profile.dart';
 import 'package:gamers_hub/pages/rules.dart';
 import 'package:gamers_hub/pages/scheduleGame.dart';
+import 'package:gamers_hub/pages/setting.dart';
 import 'package:gamers_hub/pages/statistics.dart';
 import 'package:gamers_hub/pages/tournament_games.dart';
+import 'package:gamers_hub/pages/wallet.dart';
 import 'package:gamers_hub/responsiveUI/sizeConfig.dart';
 import 'package:gamers_hub/styleguide/button.dart';
 import 'package:get/get.dart';
@@ -113,9 +118,9 @@ class _BottomDrawerState extends State<BottomDrawer> {
                   minWidth: 40,
                   onPressed: () {
                     setState(() {
-                      // currentScreen = Chat();
                       currentTab = 2;
                     });
+                    Get.to(Coming_Soon());
                   },
                   child: FittedBox(
                     child: Column(
@@ -142,9 +147,9 @@ class _BottomDrawerState extends State<BottomDrawer> {
                   minWidth: 40,
                   onPressed: () {
                     setState(() {
-                      // currentScreen = Profile();
                       currentTab = 3;
                     });
+                    Get.to(Profile());
                   },
                   child: FittedBox(
                     child: Column(
@@ -320,9 +325,9 @@ class _BottomDrawerState extends State<BottomDrawer> {
                           minWidth: 40,
                           onPressed: () {
                             setState(() {
-                              // currentScreen = Chat();
                               currentTab = 2;
                             });
+                            Get.to(Coming_Soon());
                           },
                           child: FittedBox(
                             child: Column(
@@ -350,9 +355,9 @@ class _BottomDrawerState extends State<BottomDrawer> {
                           minWidth: 40,
                           onPressed: () {
                             setState(() {
-                              // currentScreen = Profile();
                               currentTab = 3;
                             });
+                            Get.to(Profile());
                           },
                           child: FittedBox(
                             child: Column(
@@ -386,9 +391,9 @@ class _BottomDrawerState extends State<BottomDrawer> {
                             minWidth: 40,
                             onPressed: () {
                               setState(() {
-                                // currentScreen = Statistics();
                                 currentTab = 5;
                               });
+                              Get.to(Coming_Soon());
                             },
                             child: FittedBox(
                               fit: BoxFit.cover,
@@ -446,9 +451,9 @@ class _BottomDrawerState extends State<BottomDrawer> {
                             minWidth: 40,
                             onPressed: () {
                               setState(() {
-                                // currentScreen = Schedule();
                                 currentTab = 7;
                               });
+                              Get.to(Coming_Soon());
                             },
                             child: FittedBox(
                               child: Column(
@@ -475,9 +480,9 @@ class _BottomDrawerState extends State<BottomDrawer> {
                             minWidth: 40,
                             onPressed: () {
                               setState(() {
-                                // currentScreen = Chat();
                                 currentTab = 8;
                               });
+                              Get.to(Coming_Soon());
                             },
                             child: FittedBox(
                               child: Column(
@@ -504,9 +509,9 @@ class _BottomDrawerState extends State<BottomDrawer> {
                             minWidth: 40,
                             onPressed: () {
                               setState(() {
-                                // currentScreen = Profile();
                                 currentTab = 9;
                               });
+                              Get.to(Coming_Soon());
                             },
                             child: FittedBox(
                               child: Column(
@@ -544,6 +549,7 @@ class _BottomDrawerState extends State<BottomDrawer> {
                                 // currentScreen = Statistics();
                                 currentTab = 10;
                               });
+                              Get.to(Coming_Soon());
                             },
                             child: FittedBox(
                               fit: BoxFit.cover,
@@ -571,9 +577,9 @@ class _BottomDrawerState extends State<BottomDrawer> {
                             minWidth: 40,
                             onPressed: () {
                               setState(() {
-                                // currentScreen = Schedule();
                                 currentTab = 11;
                               });
+                              Get.to(Coming_Soon());
                             },
                             child: Column(
                               mainAxisAlignment: MainAxisAlignment.center,
@@ -602,9 +608,9 @@ class _BottomDrawerState extends State<BottomDrawer> {
                             minWidth: 40,
                             onPressed: () {
                               setState(() {
-                                // currentScreen = Schedule();
                                 currentTab = 12;
                               });
+                              Get.to(Wallet());
                             },
                             child: FittedBox(
                               child: Column(
@@ -633,6 +639,7 @@ class _BottomDrawerState extends State<BottomDrawer> {
                               setState(() {
                                 currentTab = 13;
                               });
+                              Get.to(Leaderboard());
                             },
                             child: FittedBox(
                               child: Column(
@@ -659,9 +666,9 @@ class _BottomDrawerState extends State<BottomDrawer> {
                             minWidth: 40,
                             onPressed: () {
                               setState(() {
-                                // currentScreen = Profile();
                                 currentTab = 14;
                               });
+                              Get.to(Setting());
                             },
                             child: FittedBox(
                               child: Column(
@@ -709,6 +716,7 @@ class _BottomDrawerState extends State<BottomDrawer> {
                           ),
                         ),
                         Expanded(
+                          // ignore: deprecated_member_use
                           child: FlatButton(
                             onPressed: () {},
                             child: flatButton(
